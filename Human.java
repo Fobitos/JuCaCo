@@ -1,22 +1,20 @@
-package codes;
-
 public class Human {
 	
 	private String nationality;
 	private String name;
-	private int identification;
+	private int ID;
 	private String region;
 	private String city;
 	private int age;
-	private int height;
-	private int weight;
+	private double height;
+	private double weight;
 	private String workPlanets;
 	
-	public Human(String nationality, String name, int identification, String region, String city, int age, int height,
-			int weight, String workPlanets) {
+	public Human(String nationality, String name, int identification, String region, String city, int age, double height,
+			double weight, String workPlanets) {
 		this.nationality = nationality;
 		this.name = name;
-		this.identification = identification;
+		this.ID = identification;
 		this.region = region;
 		this.city = city;
 		this.age = age;
@@ -42,11 +40,11 @@ public class Human {
 	}
 
 	public int getIdentification() {
-		return identification;
+		return ID;
 	}
 
 	public void setIdentification(int identification) {
-		this.identification = identification;
+		this.ID = identification;
 	}
 
 	public String getRegion() {
@@ -73,7 +71,7 @@ public class Human {
 		this.age = age;
 	}
 
-	public int getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
@@ -81,7 +79,7 @@ public class Human {
 		this.height = height;
 	}
 
-	public int getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
@@ -99,7 +97,7 @@ public class Human {
 
 	@Override
 	public String toString() {
-		return "Humano [nationality=" + nationality + ", name=" + name + ", identification=" + identification
+		return "Humano [nationality=" + nationality + ", name=" + name + ", identification=" + ID
 				+ ", region=" + region + ", city=" + city + ", age=" + age + ", height=" + height + ", weight=" + weight
 				+ ", workPlanets=" + workPlanets + "]";
 	}
