@@ -1,21 +1,19 @@
-package codes;
-
 public class Alien {
 	
 	private String speciesName;
 	private String name;
-	private int universalIdentification;
+	private int UI;
 	private String homePlanet;
 	private int age;
-	private int height;
-	private int weight;
-	private char type;
+	private double height;
+	private double weight;
+	private String type;
 	
-	public Alien(String speciesName, String name, int universalIdentification, String homePlanet, int age, int height,
-			int weight, char type) {
+	public Alien(String speciesName, String name, int universalIdentification, String homePlanet, int age, double height,
+			double weight, String type) {
 		this.speciesName = speciesName;
 		this.name = name;
-		this.universalIdentification = universalIdentification;
+		this.UI = universalIdentification;
 		this.homePlanet = homePlanet;
 		this.age = age;
 		this.height = height;
@@ -40,11 +38,11 @@ public class Alien {
 	}
 
 	public int getUniversalIdentification() {
-		return universalIdentification;
+		return UI;
 	}
 
 	public void setUniversalIdentification(int universalIdentification) {
-		this.universalIdentification = universalIdentification;
+		this.UI = universalIdentification;
 	}
 
 	public String getHomePlanet() {
@@ -63,7 +61,7 @@ public class Alien {
 		this.age = age;
 	}
 
-	public int getHeight() {
+	public double getHeight() {
 		return height;
 	}
 
@@ -71,7 +69,7 @@ public class Alien {
 		this.height = height;
 	}
 
-	public int getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 
@@ -79,18 +77,18 @@ public class Alien {
 		this.weight = weight;
 	}
 
-	public char getType() {
+	public String getType() {
 		return type;
 	}
 
-	public void setType(char type) {
+	public void setType(String type) {
 		this.type = type;
 	}
 
 	@Override
 	public String toString() {
 		return "Alien [speciesName=" + speciesName + ", name=" + name + ", universalIdentification="
-				+ universalIdentification + ", homePlanet=" + homePlanet + ", age=" + age + ", height=" + height
+				+ UI + ", homePlanet=" + homePlanet + ", age=" + age + ", height=" + height
 				+ ", weight=" + weight + ", type=" + type + "]";
 	}
 	
