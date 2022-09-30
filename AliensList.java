@@ -63,6 +63,15 @@ public class AliensList {
 			return null;
 		}
 	}
+	
+	public Alien getAlienUI(int UI) {
+		for(int i = 0; i < cant; i++) {
+			if(aliens[i].getUI() == UI) {
+				return aliens[i];
+			}
+		}
+		return null;
+	}
 
 	public int getCant() {
 		return cant;
