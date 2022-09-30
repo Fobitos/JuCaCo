@@ -37,12 +37,12 @@ public class Alien {
 		this.name = name;
 	}
 
-	public int getUniversalIdentification() {
+	public int getUI() {
 		return UI;
 	}
 
-	public void setUniversalIdentification(int universalIdentification) {
-		this.UI = universalIdentification;
+	public void setUI(int UI) {
+		this.UI = UI;
 	}
 
 	public String getHomePlanet() {
@@ -65,7 +65,7 @@ public class Alien {
 		return height;
 	}
 
-	public void setHeight(int height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 
@@ -73,7 +73,7 @@ public class Alien {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
@@ -87,9 +87,9 @@ public class Alien {
 
 	@Override
 	public String toString() {
-		return "Alien [speciesName=" + speciesName + ", name=" + name + ", universalIdentification="
-				+ UI + ", homePlanet=" + homePlanet + ", age=" + age + ", height=" + height
-				+ ", weight=" + weight + ", type=" + type + "]";
+		return name + " | Identificacion Universal: " + UI + " | Tipo: " + type + "\n"
+				+ "[Especie: " + speciesName + " | Planeta de Origen: " + homePlanet + " | Edad (convertida a humanos): " + age + " | Altura (en m): " + height
+				+ " | Peso (en kg): " + weight + "]";
 	}
 	
 }
