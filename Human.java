@@ -10,11 +10,11 @@ public class Human {
 	private double weight;
 	private String workPlanets;
 	
-	public Human(String nationality, String name, int identification, String region, String city, int age, double height,
+	public Human(String nationality, String name, int ID, String region, String city, int age, double height,
 			double weight, String workPlanets) {
 		this.nationality = nationality;
 		this.name = name;
-		this.ID = identification;
+		this.ID = ID;
 		this.region = region;
 		this.city = city;
 		this.age = age;
@@ -39,12 +39,12 @@ public class Human {
 		this.name = name;
 	}
 
-	public int getIdentification() {
+	public int getID() {
 		return ID;
 	}
 
-	public void setIdentification(int identification) {
-		this.ID = identification;
+	public void setID(int ID) {
+		this.ID = ID;
 	}
 
 	public String getRegion() {
@@ -75,7 +75,7 @@ public class Human {
 		return height;
 	}
 
-	public void setHeight(int height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 
@@ -83,7 +83,7 @@ public class Human {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 
@@ -97,9 +97,8 @@ public class Human {
 
 	@Override
 	public String toString() {
-		return "Humano [nationality=" + nationality + ", name=" + name + ", identification=" + ID
-				+ ", region=" + region + ", city=" + city + ", age=" + age + ", height=" + height + ", weight=" + weight
-				+ ", workPlanets=" + workPlanets + "]";
+		return name + " | Identificación: " + ID + " | Nacionalidad: " + nationality + "\n"
+				+ "[Region: " + region + " | Ciudad: " + city + " | Edad: " + age + " | Altura (en m): " + height
+				+ " | Peso (en kg): " + weight + " | Planetas de trabajo: " + workPlanets + "]";
 	}
-
 }
