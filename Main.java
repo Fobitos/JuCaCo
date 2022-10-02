@@ -4,8 +4,23 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Main class where all the main code is implemented.
+ *
+ * @author      Juan Castro Cortés. <juan.castro@alumnos.ucn.cl>
+ * @author      Carlos Leal Serrano. <carlos.leal@alumnos.ucn.cl>
+ */
 public class Main {
 
+  /**
+   * The main method. Scanner and two lists are built, the aliens list and the humans list.
+   * It calls two other methods, the first one read the txt files and the other one start the menu.
+   *
+   * @param args The command line arguments.
+   * @throws FileNotFoundException If the file is not found.
+   * @throws IOException If input/output values are misinterpreted or fail.
+   *
+   **/
   public static void main(String[] args) throws FileNotFoundException, IOException {
     Scanner read = new Scanner(System.in);
 
@@ -15,7 +30,17 @@ public class Main {
     fileReading(aliensList, humansList);
     menu(read, humansList, aliensList);
   }
-
+  
+  /**
+   * Two lists are inserted.
+   * This method open two different txt files, which can be empty or filled with information.
+   * It also build and add the objects in their respective lists.
+   * 
+   * @param aliensList The aliens list built in the main method.
+   * @param humansList The humans list list built in the main method.
+   * @throws FileNotFoundException If the files are not found.
+   * 
+   */
   public static void fileReading(AliensList aliensList, HumansList humansList) throws FileNotFoundException {
     int cantLinesX = 0;
     Scanner arch0 = new Scanner(new File("x.txt"));
@@ -76,6 +101,14 @@ public class Main {
     arch1.close();
   }
 
+  /**
+   * A word is inserted.
+   * Splits the word into its characters, decodes it, and then joins them into a new word.
+   * 
+   * @param word The word you want to translate into spanish.
+   * @return translatedWord The final word finally translated from the alien language.
+   * 
+   */
   public static String translateAlienWord(String word) {
     String translatedWord = "";
     String[] splittedWord = word.split("");
@@ -103,7 +136,14 @@ public class Main {
     }
     return translatedWord;
   }
-  
+
+  /**
+   * Translate 3 alien variables to their original language, which were translated into 
+   * spanish before.
+   * 
+   * @param aliensList The aliens list built in the main method.
+   *
+   */
   public static void translateBackToAlien(AliensList aliensList) {
 	  for(int i = 0; i < aliensList.getCant(); i++) {
 		  for(int j = 0; j < 3; j++) {
@@ -192,6 +232,17 @@ public class Main {
 	  }
   }
 
+  /**
+   * If one of the lists is empty or the user ends the cycle, it shows all the program options
+   * to the user on the screen and executes the chosen option inserted, displaying the result on the 
+   * screen.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param humansList The humans list built in the main method.
+   * @param aliensList The aliens list built in the main method.
+   * @throws IOException If input/output values are misinterpreted or fail.
+   * 
+   */
   public static void menu(Scanner read, HumansList humansList, AliensList aliensList) throws IOException {
     boolean exitMenu = false;
 
@@ -264,6 +315,14 @@ public class Main {
     }
   }
 
+  /**
+   * If the amount of objects is lower than the maximum elements of the list, the user 
+   * will have to enter the new data of the new alien.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param aliensList The aliens list built in the main method.
+   *
+   */
   public static void addAlien(Scanner read, AliensList aliensList) {
 	System.out.println();
 	
@@ -295,6 +354,15 @@ public class Main {
 	System.out.println();
   }
 
+  /**
+   * This method analyzes if there are any aliens in the list, if there are, it displays all the 
+   * aliens in the list, then it display the alien that is at the entered position and displays all 
+   * the data of the alien object and changes the parameter that the user enters.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param aliensList The aliens list built in the main method.
+   *
+   */
   public static void modifyAlien(Scanner read, AliensList aliensList) {
 	System.out.println();
 	
@@ -385,6 +453,14 @@ public class Main {
     System.out.println();
   }
 
+  /**
+   * If the amount of objects is lower than the maximum elements of the list, the user 
+   * will have to enter the new data of the new human.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param humansList The humans list built in the main method.
+   *
+   */
   public static void addHuman(Scanner read, HumansList humansList) {
 	System.out.println();
 	
@@ -417,7 +493,16 @@ public class Main {
 	}
 	System.out.println();
   }
-  
+
+  /**
+   * This method analyzes if there are any humans in the list, if there are, it displays all the 
+   * humans in the list, then it display the humans that is at the entered position and displays all 
+   * the data of the human object and changes the parameter that the user enters.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param humansList The humans list built in the main method.
+   *
+   */
   public static void modifyHuman(Scanner read, HumansList humansList) {
 	  System.out.println();
 	  
@@ -513,7 +598,15 @@ public class Main {
 	  }
 	  System.out.println();
   }
-  
+
+  /**
+   * If the humans list has one or more human objects, the user will be able to enter a nationality.
+   * All humans that have that nationality will be displayed on the screen.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param humansList The humans list built in the main method.
+   *
+   */
   public static void showHumansByNationality(Scanner read, HumansList humansList) {
 	  System.out.println();
 	  
@@ -535,6 +628,15 @@ public class Main {
 	  }
   }
 
+  /**
+   * If the aliens list has one or more alien objects, all the aliens inside the list are displayed.
+   * The user will be able to input an universal identification, if it's the same as one of the aliens
+   * displayed, the alien is removed from the list.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param aliensList The aliens list built in the main method.
+   *
+   */
   public static void removeAlien(Scanner read, AliensList aliensList) {
 	  System.out.println();
 	  
@@ -556,6 +658,15 @@ public class Main {
 	  }
   }
 
+  /**
+   * If the humans list has one or more human objects, all the humans inside the list are displayed.
+   * The user will be able to input an identification, if it's the same as one of the humans
+   * displayed, the human is removed from the list.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param aliensList The aliens list built in the main method.
+   *
+   */
   public static void removeHuman(Scanner read, HumansList humansList) {
 	  System.out.println();
 	  
@@ -577,6 +688,14 @@ public class Main {
 	  }
   }
 
+  /**
+   * If the aliens list has one or more alien objects, the user will be able to input a
+   * identification, if this UI match with one of the aliens UI, the alien will be displayed.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param aliensList The aliens list built in the main method.
+   *
+   */
   public static void findWithUI(Scanner read, AliensList aliensList) {
 	  System.out.println();
 	  
@@ -602,6 +721,15 @@ public class Main {
 	  }
   }
 
+  /**
+   * If the aliens list has one or more alien objects, the user will be able to enter a planet.
+   * All the aliens that live on that planet will be displayed on the screen.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param aliensList The aliens list built in the main method.
+   * @param humansList The humans list built in the main method.
+   *
+   */
   public static void showByPlanet(Scanner read, AliensList aliensList, HumansList humansList) {
 	  System.out.println();
 	  
@@ -632,7 +760,18 @@ public class Main {
 		  System.out.println();
 	  }
   }
-  
+
+  /**
+   * A planet is inserted.
+   * This method splits and insert the work planets of a human into a String list. If the work planet
+   * is the same as the planet inserted, the counter of workers in that planet increases by one.
+   * This last value is returned when the cycles end.
+   * 
+   * @param planet Name of a planet.
+   * @param humansList The humans list built in the main method.
+   * @return cantWorkers The amount of workers in the planet inserted.
+   *
+   */
   public static int cantWorkersInPlanet(String planet, HumansList humansList) {
 	  int cantWorkers = 0;
 	  
@@ -640,6 +779,7 @@ public class Main {
 		  String[] workPlanets = humansList.getHuman(i).getWorkPlanets().split("/");
 		  
 		  for(int j = 0; j < workPlanets.length; j++) {
+			  System.out.println(workPlanets[j]);
 			  if(workPlanets[j].equals(planet)) {
 				  cantWorkers++;
 			  }
@@ -648,6 +788,15 @@ public class Main {
 	  return cantWorkers;
   }
 
+  /**
+   * If the humans list has one or more human objects, the user will be able to enter a nationality.
+   * All humans that have that nationality will be displayed on the screen.
+   * It also shows the percentage of humans that belongs to that nationality.
+   * 
+   * @param read The scanner built in the main method. Saves the values entered by the user.
+   * @param humansList The humans list built in the main method.
+   *
+   */
   public static void showByNationality(Scanner read, HumansList humansList) {
 	  System.out.println();
 	  
@@ -675,6 +824,13 @@ public class Main {
 	  }
   }
 
+  /**
+   * If the aliens list has one or more alien objects, it displays a table with all aliens
+   * organized by type, showing the amount and percentages.
+   * 
+   * @param aliensList The aliens list built in the main method.
+   *
+   */
   public static void showAliensTable(AliensList aliensList) {
 	  System.out.println();
 	  
@@ -690,7 +846,9 @@ public class Main {
 		  double percI = (cantAliensI/aliensList.getCant()) * 100;
 		  double percV = (cantAliensV/aliensList.getCant()) * 100;
 		  double percF = (cantAliensF/aliensList.getCant()) * 100;
-
+		  
+		  System.out.println(1/2);
+		  
 		  System.out.println("                   |    I    |    V    |    F    |");
 		  System.out.println("--------------------------------------------------");
 		  System.out.println("  Cant. por tipo   |   " + cantAliensI + "   |   " + cantAliensV + "   |   " + cantAliensF + "   |");
@@ -700,7 +858,16 @@ public class Main {
 		  System.out.println();
 	  }
   }
-  
+
+  /**
+   * A word is inserted
+   * Counts all aliens with that word as type and returns the value.
+   * 
+   * @param structure Type of alien.
+   * @param aliensList The aliens list built in the main method.
+   * @return cantAliens The amount of aliens with the same type as the one inserted.
+   *
+   */
   public static int aliensPerType(String structure, AliensList aliensList) {
 	  int cantAliens = 0;
 	  
@@ -712,6 +879,16 @@ public class Main {
 	  return cantAliens;
   }
 
+  /**
+   * This method overwrites the two existing lists, encode them in their respective formats,
+   * transforming only the aliens age back to their system, and changing meters to centimeters and 
+   * grams to kilograms. It writes the two text files with the new information on a new line.
+   * 
+   * @param aliensList The aliens list built in the main method.
+   * @param humansList The humans list built in the main method.
+   * @throws IOException If input/output values are misinterpreted or fail.
+   *
+   */
   public static void fileWriting(AliensList aliensList, HumansList humansList) throws IOException {
     FileWriter save0 = new FileWriter(new File("x.txt"));
     for (int i = 0; i < aliensList.getCant(); i++) {
