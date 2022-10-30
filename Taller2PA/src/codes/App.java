@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
 * Main class where all the main code is implemented.
 *
-* @author      Juan Castro Cortés.   ||  21.219.278-3
+* @author      Juan Castro CortÃ©s.   ||  21.219.278-3
 * @author      Carlos Leal Serrano.  ||  20.785.431-k
 */
 public class App {
@@ -17,9 +17,9 @@ public class App {
    	 * It calls seven other methods, the first six read the txt files and the other one starts the login system.
 	 *
 	 * @param args The command line arguments.   
-     * @throws FileNotFoundException If the file is not found. 
-     * @throws IOException If input/output values are misinterpreted or fail.
-     **/
+         * @throws FileNotFoundException If the file is not found. 
+         * @throws IOException If input/output values are misinterpreted or fail.
+         **/
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		
 		Scanner read = new Scanner(System.in);
@@ -71,7 +71,7 @@ public class App {
 			System.out.print("Ingrese su nombre: ");
 			String name = read.nextLine();
 			
-			System.out.print("Ingrese su identificación: ");
+			System.out.print("Ingrese su identificaciÃ³n: ");
 			String ID = read.nextLine();
 			
 			if(name.equals("empanada") && ID.equals("porotosconriendas")) {
@@ -137,17 +137,17 @@ public class App {
 			System.out.println("[8] Mostrar todo el personal");         	// LISTO
 			System.out.println("[9] Mostrar grupos");	                    // LISTO
 			System.out.println("[10] Mostrar todos los robots");            // LISTO
-			System.out.println("[11] Revisar munición");                    // LISTO
-			System.out.println("[12] Mostrar todos los países");			// LISTO
-			System.out.println("[13] Añadir stock de piezas");              // LISTO
-			System.out.println("[14] Añadir stock de algún material");		// LISTO
+			System.out.println("[11] Revisar municiÃ³n");                    // LISTO
+			System.out.println("[12] Mostrar todos los paÃ­ses");			// LISTO
+			System.out.println("[13] AÃ±adir stock de piezas");              // LISTO
+			System.out.println("[14] AÃ±adir stock de algÃºn material");		// LISTO
 			System.out.println("[15] Mostrar todas las piezas y armas");	// LISTO
 			System.out.println("[16] Cambiar piezas");                      // LISTO
-			System.out.println("[17] Cerrar sesión");						// LISTO
+			System.out.println("[17] Cerrar sesiÃ³n");						// LISTO
 			System.out.println("============================");
 			
 			System.out.println();
-			System.out.print("Ingrese una opción: ");
+			System.out.print("Ingrese una opciÃ³n: ");
 			
 			int option = Integer.parseInt(read.nextLine());
 			switch(option) {
@@ -207,7 +207,7 @@ public class App {
 				break;
 			default:
 				System.out.println();
-				System.out.println("Opción no disponible.");
+				System.out.println("OpciÃ³n no disponible.");
 				break;
 			}
 		}
@@ -242,7 +242,7 @@ public class App {
 		arch.close();
 	}
 
-    /**
+        /**
 	 * One list is inserted.
 	 * This method open a txt file, which can be empty or filled with information.
 	 * It also builds and add the objects in the respective list.
@@ -251,7 +251,7 @@ public class App {
 	 * @throws FileNotFoundException If the files are not found.
 	 */
 	public static void readCountries(CountryList countries) throws FileNotFoundException {
-		Scanner arch = new Scanner(new File("Países.txt"));
+		Scanner arch = new Scanner(new File("PaÃ­ses.txt"));
 		while(arch.hasNextLine()) {
 			String line = arch.nextLine();
 			String[] parts = line.split(", ");
@@ -374,7 +374,7 @@ public class App {
 	 */
 	public static void addPieceOrWeapon(Scanner read, PieceList pieces, WeaponsList weapons) {
 		System.out.println();
-		System.out.print("¿Desea ingresar una pieza (1) o un arma (2)?: ");
+		System.out.print("Â¿Desea ingresar una pieza (1) o un arma (2)?: ");
 		
 		int option = Integer.parseInt(read.nextLine());
 		switch(option) {
@@ -386,7 +386,7 @@ public class App {
 			break;
 		default:
 			System.out.println();
-			System.out.println("Ingrese una opción válida.");
+			System.out.println("Ingrese una opciÃ³n vÃ¡lida.");
 			break;
 		}
 	}
@@ -403,13 +403,13 @@ public class App {
 		System.out.print("Nombre: ");
 		String name = read.nextLine();
 		
-		System.out.print("Código:");
+		System.out.print("CÃ³digo:");
 		String code = read.nextLine();
 		
 		System.out.print("Tipo: ");
 		String type = read.nextLine();
 		
-		System.out.print("País de origen: ");
+		System.out.print("PaÃ­s de origen: ");
 		String originCountry = read.nextLine();
 		
 		System.out.print("Cantidad de material necesario: ");
@@ -439,13 +439,13 @@ public class App {
 		System.out.print("Nombre: ");
 		String name = read.nextLine();
 		
-		System.out.print("Código: ");
+		System.out.print("CÃ³digo: ");
 		String code = read.nextLine();
 		
-		System.out.print("Cantidad de munición: ");
+		System.out.print("Cantidad de municiÃ³n: ");
 		int ammo = Integer.parseInt(read.nextLine());
 		
-		System.out.print("País de origen: ");
+		System.out.print("PaÃ­s de origen: ");
 		String originCountry = read.nextLine();
 		
 		System.out.print("Cantidad de material necesario: ");
@@ -491,7 +491,7 @@ public class App {
 	        System.out.println("[" + i + "] " + a.getName());
 	      }
 	    }
-	    System.out.print("Ingrese el n° de los brazos que desea agregar: ");
+	    System.out.print("Ingrese el nÂ° de los brazos que desea agregar: ");
 	    int iArms = Integer.parseInt(read.nextLine());
 	    Piece arms = pieces.getPiece(iArms);
 	    String armsName = "";
@@ -510,7 +510,7 @@ public class App {
 	        System.out.println("[" + i + "] " + a.getName());
 	      }
 	    }
-	    System.out.print("Ingrese el n° de las piernas que desea agregar: ");
+	    System.out.print("Ingrese el nÂ° de las piernas que desea agregar: ");
 	    int iLegs = Integer.parseInt(read.nextLine());
 	    Piece legs = pieces.getPiece(iLegs);
 	    String legsName = "";
@@ -521,14 +521,14 @@ public class App {
 	    	System.out.println("No hay piezas suficientes");
 	    	return;
 	    }
-	    System.out.println("Lista Tórax:");
+	    System.out.println("Lista TÃ³rax:");
 	    for(int i = 0 ; i < pieces.getCant(); i++) {
-	      Piece a = pieces.getPieceType(i, "tórax");
+	      Piece a = pieces.getPieceType(i, "tÃ³rax");
 	      if(a != null) {
 	        System.out.println("[" + i + "] " + a.getName());
 	      }
 	    }
-	    System.out.print("Ingrese el n° del tórax que desea agregar: ");
+	    System.out.print("Ingrese el nÂ° del tÃ³rax que desea agregar: ");
 	    int iChest = Integer.parseInt(read.nextLine());
 	    Piece chest = pieces.getPiece(iChest);
 	    String chestName = "";
@@ -547,7 +547,7 @@ public class App {
 	        System.out.println("[" + i + "] " + a.getName());
 	      }
 	    }
-	    System.out.print("Ingrese el n° de la cabeza que desea agregar: ");
+	    System.out.print("Ingrese el nÂ° de la cabeza que desea agregar: ");
 	    int iHead = Integer.parseInt(read.nextLine());
 	    Piece head = pieces.getPiece(iHead);
 	    String headName = "";
@@ -571,7 +571,7 @@ public class App {
 		        System.out.println("[" + i + "] " + a.getName());
 		      }
 		    }
-		    System.out.print("Ingrese el n° de la cualidad extra que desea agregar: ");
+		    System.out.print("Ingrese el nÂ° de la cualidad extra que desea agregar: ");
 		    int iExtra = Integer.parseInt(read.nextLine());
 		    extra = pieces.getPiece(iExtra);
 		    if(countries.checkTotalIt(extra.getCode())) {
@@ -583,7 +583,7 @@ public class App {
 		    }
 	    }
 	    else {
-	      System.out.println("Pieza extra no añadida.");
+	      System.out.println("Pieza extra no aÃ±adida.");
 	      System.out.println();
 	    }
 	    
@@ -591,7 +591,7 @@ public class App {
 	    for(int i = 0 ; i < weapons.getCant(); i++) {
 	      System.out.println("[" + i + "] " + weapons.getWeapon(i).getName());
 	    }
-	    System.out.print("Ingrese el n° del arma que desea agregar: ");
+	    System.out.print("Ingrese el nÂ° del arma que desea agregar: ");
 	    int iWeapon = Integer.parseInt(read.nextLine());
 	    Weapon weapon = weapons.getWeapon(iWeapon);
 	    String weaponName = "";
@@ -638,9 +638,9 @@ public class App {
 	    System.out.println();
 	    
 	    if(!added) {
-	    	System.out.println("El robot no ha podido ser añadido. Intente nuevamente.");
+	    	System.out.println("El robot no ha podido ser aÃ±adido. Intente nuevamente.");
 	    } else {
-	    	System.out.println("Robot añadido exitosamente.");
+	    	System.out.println("Robot aÃ±adido exitosamente.");
 	    	showRobotImage();
 	    	System.out.println(a.toString());
 	    }
@@ -670,7 +670,7 @@ public class App {
 		  }
 		  String[] members = new String[6];
 		  for(int i = 0 ; i<6;i++) {
-			  System.out.println("Menu creacion de Equipo // personal N° "+ (i+1));
+			  System.out.println("Menu creacion de Equipo // personal NÂ° "+ (i+1));
 			  System.out.println("[1] Agregar persona");
 			  System.out.println("[2] Escoger escoger a alguien del personal");
 			  System.out.println("[3] Mostrar Los integrantes");
@@ -831,15 +831,15 @@ public class App {
 	 */
 	public static void searchByType(Scanner read, PieceList pieces, CountryList countries) {
 		System.out.println();
-		System.out.println("¿Qué pieza desea buscar?");
+		System.out.println("Â¿QuÃ© pieza desea buscar?");
 		System.out.println();
 		System.out.println("[1] Cabeza");
-		System.out.println("[2] Tórax");
+		System.out.println("[2] TÃ³rax");
 		System.out.println("[3] Brazos");
 		System.out.println("[4] Piernas");
 		System.out.println("[5] Extra");
 		System.out.println();
-		System.out.print("Opción: ");
+		System.out.print("OpciÃ³n: ");
 		
 		int option = Integer.parseInt(read.nextLine());
 		switch(option) {
@@ -847,7 +847,7 @@ public class App {
 			findPiece(pieces, countries, "cabeza");
 			break;
 		case 2:
-			findPiece(pieces, countries, "tórax");
+			findPiece(pieces, countries, "tÃ³rax");
 			break;
 		case 3:
 			findPiece(pieces, countries, "brazos");
@@ -860,7 +860,7 @@ public class App {
 			break;
 		default:
 			System.out.println();
-			System.out.println("Ingrese una opción válida.");
+			System.out.println("Ingrese una opciÃ³n vÃ¡lida.");
 			break;
 		}
 	}
@@ -889,7 +889,7 @@ public class App {
 		
 		if(cantCountries == 0) {
 			System.out.println();
-			System.out.println("Ningún país tiene una pieza de ese tipo.");
+			System.out.println("NingÃºn paÃ­s tiene una pieza de ese tipo.");
 		}
 	}
 	
@@ -1030,34 +1030,34 @@ public class App {
 			showRobotImage();
 			System.out.println(r.toString());
 			System.out.println();
-			System.out.print("¿Desea cambiar alguna pieza? (y/n): ");
+			System.out.print("Â¿Desea cambiar alguna pieza? (y/n): ");
 			String option = read.nextLine();
 			
 			while(!option.equals("y") && !option.equals("n")) {
 				System.out.println();
-				System.out.println("Ingrese una opción válida.");
+				System.out.println("Ingrese una opciÃ³n vÃ¡lida.");
 				System.out.println();
-				System.out.print("¿Desea cambiar alguna pieza? (y/n): ");
+				System.out.print("Â¿Desea cambiar alguna pieza? (y/n): ");
 				option = read.nextLine();
 			}
 			
 			if(option.equals("n")) {
 				System.out.println();
-				System.out.println("Revisión de robot finalizada. Ninguna pieza fue cambiada.");
+				System.out.println("RevisiÃ³n de robot finalizada. Ninguna pieza fue cambiada.");
 			}
 			else if(option.equals("y")) {
 				boolean checker = true;
 				
 				while(checker) {
 					System.out.println();
-					System.out.println("¿Qué pieza desea cambiar?");
+					System.out.println("Â¿QuÃ© pieza desea cambiar?");
 					System.out.println("[1] Brazos");
 					System.out.println("[2] Piernas");
-					System.out.println("[3] Tórax");
+					System.out.println("[3] TÃ³rax");
 					System.out.println("[4] Cabeza");
 					System.out.println("[5] Extra");
-					System.out.println("[6] Salir de la revisión");
-					System.out.print("N°: ");
+					System.out.println("[6] Salir de la revisiÃ³n");
+					System.out.print("NÂ°: ");
 					int pieceI = Integer.parseInt(read.nextLine());
 					
 					switch(pieceI) {
@@ -1068,7 +1068,7 @@ public class App {
 						changePiece(read, robots, pieces, "piernas", r);
 						break;
 					case 3:
-						changePiece(read, robots, pieces, "tórax", r);
+						changePiece(read, robots, pieces, "tÃ³rax", r);
 						break;
 					case 4: 
 						changePiece(read, robots, pieces, "cabeza", r);
@@ -1078,12 +1078,12 @@ public class App {
 						break;
 					case 6:
 						System.out.println();
-						System.out.println("Finalizando revisión.");
+						System.out.println("Finalizando revisiÃ³n.");
 						checker = false;
 						break;
 					default:
 						System.out.println();
-						System.out.println("Ingrese una opción válida.");
+						System.out.println("Ingrese una opciÃ³n vÃ¡lida.");
 						break;
 					}
 				}
@@ -1110,7 +1110,7 @@ public class App {
 		}
 		if(cantPieces == 0) {
 			System.out.println();
-			System.out.println("No hay piezas de este tipo. Modificación imposible.");
+			System.out.println("No hay piezas de este tipo. ModificaciÃ³n imposible.");
 		} else {
 			System.out.println();
 			System.out.println("Piezas para intercambiar:");
@@ -1121,7 +1121,7 @@ public class App {
 				}
 			}
 			System.out.println();
-			System.out.print("Ingrese el n° de la pieza que desea intercambiar: ");
+			System.out.print("Ingrese el nÂ° de la pieza que desea intercambiar: ");
 			int cPiece = Integer.parseInt(read.nextLine());
 			
 			String pieceName = pieces.getPiece(cPiece).getName();
@@ -1130,7 +1130,7 @@ public class App {
 				r.setArmsName(pieceName);
 			} else if(type.equals("piernas")) {
 				r.setLegsName(pieceName);
-			} else if(type.equals("tórax")) {
+			} else if(type.equals("tÃ³rax")) {
 				r.setChestName(pieceName);
 			} else if(type.equals("cabeza")) {
 				r.setHeadName(pieceName);
@@ -1165,14 +1165,14 @@ public class App {
 				cont++;
 			}
 			System.out.println();
-			System.out.print("Ingrese el n° del arma que desea intercambiar: ");
+			System.out.print("Ingrese el nÂ° del arma que desea intercambiar: ");
 			int option = Integer.parseInt(read.nextLine());
 			
 			while(option < 1 || option > cont) {
 				System.out.println();
-				System.out.println("Ingrese una opción válida.");
+				System.out.println("Ingrese una opciÃ³n vÃ¡lida.");
 				System.out.println();
-				System.out.print("Ingrese el n° del arma que desea intercambiar: ");
+				System.out.print("Ingrese el nÂ° del arma que desea intercambiar: ");
 				option = Integer.parseInt(read.nextLine());
 			}
 			int newOption = option - 1;
@@ -1277,7 +1277,7 @@ public class App {
 		int cantR = 0;
 		for(int i = 0; i < robots.getCant(); i++) {
 			Robot r = robots.getRobot(i);
-			System.out.println("[" + (cantR + 1) + "] " + r.getRobotName() + " | Código Piloto: " + r.getPilotCode() + " | Equipo: " + r.getTeam());
+			System.out.println("[" + (cantR + 1) + "] " + r.getRobotName() + " | CÃ³digo Piloto: " + r.getPilotCode() + " | Equipo: " + r.getTeam());
 			cantR++;
 		}
 		if(cantR == 0) {
@@ -1305,29 +1305,29 @@ public class App {
 			cantR++;
 		}
 		System.out.println();
-		System.out.print("Ingrese el n° del robot al que desea aumentar su munición: ");
+		System.out.print("Ingrese el nÂ° del robot al que desea aumentar su municiÃ³n: ");
 		int option = Integer.parseInt(read.nextLine()) - 1;
 		
 		for(int i = 0; i < weapons.getCant(); i++) {
 			if(weapons.getWeapon(i).getName().equals(robots.getRobot(option).getWeaponName())) {
-				System.out.print("Ingrese la cantidad de munición que desea agregar: ");
+				System.out.print("Ingrese la cantidad de municiÃ³n que desea agregar: ");
 				int ammo = Integer.parseInt(read.nextLine());
 				
 				while(ammo < 0) {
 					System.out.println();
-					System.out.println("Ingrese una cantidad válida.");
+					System.out.println("Ingrese una cantidad vÃ¡lida.");
 					System.out.println();
-					System.out.print("Ingrese la cantidad de munición que desea agregar: ");
+					System.out.print("Ingrese la cantidad de municiÃ³n que desea agregar: ");
 					ammo = Integer.parseInt(read.nextLine());
 				}
 				weapons.getWeapon(i).setAmmo(weapons.getWeapon(i).getAmmo() + ammo);
 				System.out.println();
-				System.out.println("Munición agregada exitosamente.");
+				System.out.println("MuniciÃ³n agregada exitosamente.");
 				return;
 			}
 		}
 		System.out.println();
-		System.out.println("No ha sido posible agregar la munición.");
+		System.out.println("No ha sido posible agregar la municiÃ³n.");
 	}
 	
 	/**
@@ -1337,7 +1337,7 @@ public class App {
 	 */
 	public static void showCountries(CountryList countries) {
 		System.out.println();
-		System.out.println("Países:");
+		System.out.println("PaÃ­ses:");
 		
 		String[] shownCountries = new String[100];
 		int cantP = 0;
@@ -1364,7 +1364,7 @@ public class App {
 		}
 		
 		if(cantP == 0) {
-			System.out.println("No hay países registrados.");
+			System.out.println("No hay paÃ­ses registrados.");
 		}
 	}
 	
@@ -1379,7 +1379,7 @@ public class App {
 	 */
 	public static void addPiecesStock(Scanner read, CountryList countries, PieceList pieces, MaterialsList materials) {
 		System.out.println();
-		System.out.println("Países:");
+		System.out.println("PaÃ­ses:");
 		
 		String[] shownCountries = new String[100];
 		int cantP = 0;
@@ -1399,7 +1399,7 @@ public class App {
 			}
 		}
 		if(cantP == 0) {
-			System.out.println("No hay países registrados.");
+			System.out.println("No hay paÃ­ses registrados.");
 			return;
 		}
 		
@@ -1411,7 +1411,7 @@ public class App {
 			}
 		}
 		System.out.println();
-		System.out.print("Ingrese el n° del país al que desea agregarle stock: ");
+		System.out.print("Ingrese el nÂ° del paÃ­s al que desea agregarle stock: ");
 		int option = Integer.parseInt(read.nextLine()) - 1;
 		
 		for(int i = 0; i < countries.getCant(); i++) {
@@ -1436,7 +1436,7 @@ public class App {
 				
 				while(cantPieces < 0 || materialUsed > materials.getMaterialName(countries.getCountry(i).getMaterial()).getStock()) {
 					System.out.println();
-					System.out.println("Ingrese una cantidad válida.");
+					System.out.println("Ingrese una cantidad vÃ¡lida.");
 					System.out.println();
 					System.out.print("Ingrese la cantidad que desea agregar: ");
 					cantPieces = Integer.parseInt(read.nextLine());
@@ -1465,7 +1465,7 @@ public class App {
 			System.out.println("No hay materiales para agregar stock.");
 		} else {
 			System.out.println();
-			System.out.println("¿A qué material desea agregar stock?");
+			System.out.println("Â¿A quÃ© material desea agregar stock?");
 			System.out.println();
 			
 			int cont = 0;
@@ -1474,7 +1474,7 @@ public class App {
 				cont++;
 			}
 			System.out.println();
-			System.out.print("Opción: ");
+			System.out.print("OpciÃ³n: ");
 			int option = Integer.parseInt(read.nextLine()) - 1;
 			Material m = materials.getMaterial(option);
 			
@@ -1488,7 +1488,7 @@ public class App {
 				System.out.println("Cantidad ingresada exitosamente.");
 			} else {
 				System.out.println();
-				System.out.println("Ingrese una cantidad válida.");
+				System.out.println("Ingrese una cantidad vÃ¡lida.");
 			}
 		}
 	}
@@ -1507,7 +1507,7 @@ public class App {
 	    int cantP = 0;
 	    for(int i = 0; i < pieces.getCant(); i++) {
 	    	Piece p = pieces.getPiece(i);
-			System.out.println("[" + (cantP + 1) + "] [" + p.getName() + " | Código: " + p.getCode() + "] Creado por " + p.getOriginCountry());
+			System.out.println("[" + (cantP + 1) + "] [" + p.getName() + " | CÃ³digo: " + p.getCode() + "] Creado por " + p.getOriginCountry());
 			cantP++;
 	    }
 	    if(cantP == 0) {
@@ -1520,7 +1520,7 @@ public class App {
 	    int cantW = 0;
 	    for(int i = 0; i < weapons.getCant(); i++) {
 	    	Weapon w = weapons.getWeapon(i);
-	    	System.out.println("[" + (cantW + 1) + "] [" + w.getName() + " | Código: " + w.getCode() + " | AMMO: " + w.getAmmo() + "] Creado por " + w.getOriginCountry());
+	    	System.out.println("[" + (cantW + 1) + "] [" + w.getName() + " | CÃ³digo: " + w.getCode() + " | AMMO: " + w.getAmmo() + "] Creado por " + w.getOriginCountry());
 	    	cantW++;
 	    }
 	    if(cantW == 0) {
@@ -1555,15 +1555,15 @@ public class App {
 			boolean checker = true;
 			while(checker) {
 				System.out.println();
-				System.out.println("¿Qué pieza desea cambiar?");
+				System.out.println("Â¿QuÃ© pieza desea cambiar?");
 				System.out.println("[1] Brazos");
 				System.out.println("[2] Piernas");
-				System.out.println("[3] Tórax");
+				System.out.println("[3] TÃ³rax");
 				System.out.println("[4] Cabeza");
 				System.out.println("[5] Extra");
 				System.out.println("[6] Arma");
-				System.out.println("[7] Volver al menú");
-				System.out.print("N°: ");
+				System.out.println("[7] Volver al menÃº");
+				System.out.print("NÂ°: ");
 				int pieceI = Integer.parseInt(read.nextLine());
 				
 				switch(pieceI) {
@@ -1574,7 +1574,7 @@ public class App {
 					changePiece(read, robots, pieces, "piernas", r);
 					break;
 				case 3:
-					changePiece(read, robots, pieces, "tórax", r);
+					changePiece(read, robots, pieces, "tÃ³rax", r);
 					break;
 				case 4: 
 					changePiece(read, robots, pieces, "cabeza", r);
@@ -1592,7 +1592,7 @@ public class App {
 					break;
 				default:
 					System.out.println();
-					System.out.println("Ingrese una opción válida.");
+					System.out.println("Ingrese una opciÃ³n vÃ¡lida.");
 					break;
 				}
 			}
@@ -1615,17 +1615,17 @@ public class App {
 	 */
 	public static void secretMenu(Scanner read, RobotsList robots, CountryList countries, PieceList pieces, WeaponsList weapons, MaterialsList materials, PersonList people, ModelList models) throws IOException {
 		System.out.println();
-		System.out.println("Se ha ingresado al menú secreto de manera exitosa.");
+		System.out.println("Se ha ingresado al menÃº secreto de manera exitosa.");
 		
 		boolean checker = true;
 		while(checker) {
 			System.out.println();
 			System.out.println("==============================================");
-			System.out.println("[1] Activar producción de recursos nucleares");
+			System.out.println("[1] Activar producciÃ³n de recursos nucleares");
 			System.out.println("[2] Destruir todo..");
 			System.out.println("==============================================");
 			System.out.println();
-			System.out.print("Ingrese una opción: ");
+			System.out.print("Ingrese una opciÃ³n: ");
 			int opcion = Integer.parseInt(read.nextLine());
 			
 			switch(opcion) {
@@ -1637,7 +1637,7 @@ public class App {
 				break;
 			case 2:
 				System.out.println();
-				System.out.print("Confirmación necesaria, presione 1 para continuar: ");
+				System.out.print("ConfirmaciÃ³n necesaria, presione 1 para continuar: ");
 				int confirmation = Integer.parseInt(read.nextLine());
 				
 				switch(confirmation) {
@@ -1652,13 +1652,13 @@ public class App {
 					break;
 				default:
 					System.out.println();
-					System.out.println("Eliminación mundial cancelada.");
+					System.out.println("EliminaciÃ³n mundial cancelada.");
 					break;
 				}
 				break;
 			default:
 				System.out.println();
-				System.out.println("Opción no disponible.");
+				System.out.println("OpciÃ³n no disponible.");
 				break;
 			}
 		}
@@ -1691,14 +1691,14 @@ public class App {
 	 */
 	public static void uraniumPieces(Scanner read, PieceList pieces, CountryList countries, MaterialsList materials) {
 		System.out.println();
-		System.out.println("Procedimiento === CREACIÓN DE PIEZAS NUCLEARES === inicializado.");
+		System.out.println("Procedimiento === CREACIÃ“N DE PIEZAS NUCLEARES === inicializado.");
 		System.out.println();
 		System.out.println("===== Brazos =====");
 		
 		System.out.print("Ingrese el nombre: ");
 		String name = read.nextLine();
 
-		System.out.print("Ingrese el código: ");
+		System.out.print("Ingrese el cÃ³digo: ");
 		String code = read.nextLine();
 		
 		System.out.print("Ingrese la cantidad de Uranio necesario: ");
@@ -1718,7 +1718,7 @@ public class App {
 		System.out.print("Ingrese el nombre: ");
 		name = read.nextLine();
 
-		System.out.print("Ingrese el código: ");
+		System.out.print("Ingrese el cÃ³digo: ");
 		code = read.nextLine();
 		
 		System.out.print("Ingrese la cantidad de Uranio necesario: ");
@@ -1733,18 +1733,18 @@ public class App {
 			materials.getMaterialName("Uranio").setStock(materials.getMaterialName("Uranio").getStock() - cantMaterial);
 			
 		System.out.println();
-		System.out.println("==== Tórax ====");
+		System.out.println("==== TÃ³rax ====");
 			
 		System.out.print("Ingrese el nombre: ");
 		name = read.nextLine();
 
-		System.out.print("Ingrese el código: ");
+		System.out.print("Ingrese el cÃ³digo: ");
 		code = read.nextLine();
 			
 		System.out.print("Ingrese la cantidad de Uranio necesario: ");
 		cantMaterial = Integer.parseInt(read.nextLine());
 			
-			p = new Piece(name, code, "tórax", "area51", cantMaterial);
+			p = new Piece(name, code, "tÃ³rax", "area51", cantMaterial);
 			pieces.add(p);
 			
 			c = new Country("area51", "pieza", code, 1, "Uranio");
@@ -1758,7 +1758,7 @@ public class App {
 		System.out.print("Ingrese el nombre: ");
 		name = read.nextLine();
 
-		System.out.print("Ingrese el código: ");
+		System.out.print("Ingrese el cÃ³digo: ");
 		code = read.nextLine();
 			
 		System.out.print("Ingrese la cantidad de Uranio necesario: ");
@@ -1778,7 +1778,7 @@ public class App {
 		System.out.print("Ingrese el nombre: ");
 		name = read.nextLine();
 
-		System.out.print("Ingrese el código: ");
+		System.out.print("Ingrese el cÃ³digo: ");
 		code = read.nextLine();
 			
 		System.out.print("Ingrese la cantidad de Uranio necesario: ");
@@ -1845,7 +1845,7 @@ public class App {
 		}
 		save0.close();
 		
-		FileWriter save1 = new FileWriter(new File("Países.txt"));
+		FileWriter save1 = new FileWriter(new File("PaÃ­ses.txt"));
 		for(int i = 0; i < countries.getCant(); i++) {
 			save1.write(countries.getCountry(i).getCountryName() + ", " + countries.getCountry(i).getType() + ", "
 					+ countries.getCountry(i).getTypeCode() + ", " + countries.getCountry(i).getCant() + ", "
@@ -1917,7 +1917,7 @@ public class App {
 		}
 		save0.close();
 		
-		FileWriter save1 = new FileWriter(new File("Países.txt"));
+		FileWriter save1 = new FileWriter(new File("PaÃ­ses.txt"));
 		for(int i = 0; i < countries.getCant(); i++) {
 			save1.write("");
 			save1.write("\r\n");
