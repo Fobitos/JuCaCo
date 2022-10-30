@@ -1,0 +1,11 @@
+casco samurai, 00001, cabeza, Japón, 100
+piernas saltarinas, 00002, piernas, Chile, 200
+brazos saltarines, 00003, brazos, Chile, 200
+tórax saltarin, 00004, tórax, China, 200
+cabeza saltarina, 00005, cabeza, Ecuador, 200
+alas de oricalco, 00006, extra, Argentina, 300
+kaskdma, asdkmadmk, brazos, area51, 231
+askd, akmwda, piernas, area51, 1231
+kamdmk, awmk, tórax, area51, 1000
+akmdmk, awkmmwa, cabeza, area51, 10000
+kamdkw, wakmmw, extra, area51, 2500

@@ -1,0 +1,2 @@
+metralleta circular, 00010, 1323, China, 1000
+escopeta, 00011, 100, Rusia, 100

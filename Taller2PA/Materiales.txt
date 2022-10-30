@@ -1,0 +1,5 @@
+Cobre,10200,Chile
+Diamante,0,China
+Mithril,1500,Japón
+Oro,10000,Africa
+Uranio,85038,area51
