@@ -1,0 +1,14 @@
+AvancePerpetuo, PC, P, 200
+HerculesX-13, PP, B, 1500
+IronTorax, PE, T, 1000
+CascoMinero, PP, C, 200, 500
+PiesGusano, PP, P, 150
+Brazos de araña, PC, B, 2000
+Pectorales de Saltamontes, PP, T, 800
+CabezaHydra, PE, C, 150, 400
+AKA47, PC, B, 250
+awdmakmdawd, PP, C, 399, 100
+Brazo metalico, PP, B, 2000
+Piernas cyborg, PE, P, 160
+Cabezon, PE, C, 250, 1000
+Disparo de Kilowatts, PP, B, 250
